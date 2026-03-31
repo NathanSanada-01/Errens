@@ -122,9 +122,40 @@ nav ul li a:hover { color: #0984e3; }
 
 .card .icon { font-size: 3rem; margin-bottom: 20px; }
 
-/* スマホ対応（レスポンシブ） */
+/* --- モバイルレスポンシブ対応 --- */
+
 @media (max-width: 768px) {
-    .flex { flex-direction: column; text-align: center; }
-    .grid { grid-template-columns: 1fr; }
-    .hero-content h2 { font-size: 2rem; }
+    /* ナビゲーションを縦並びにする */
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    /* ヒーローセクションを縦並びにする */
+    .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem; /* 文字を少し小さく */
+    }
+
+    .hero-image {
+        order: -1; /* 画像を文字より上に持ってくる（スマホで見栄えが良い） */
+    }
+
+    /* カテゴリーカードを1列にする */
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
