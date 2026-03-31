@@ -1,0 +1,130 @@
+/* リセットCSS & 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ナビゲーション */
+.navbar {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.5rem; color: #2d3436; }
+.logo span { color: #0984e3; } /* バンクーバーの海のような青 */
+
+nav ul { display: flex; list-style: none; align-items: center; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
+nav ul li a:hover { color: #0984e3; }
+
+.btn-primary {
+    background: #0984e3;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* ヒーローセクション */
+.hero {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #636e72;
+}
+
+.btn-main {
+    display: inline-block;
+    background: #2d3436;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.btn-sub {
+    display: inline-block;
+    color: #2d3436;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* カテゴリーカード (Grid) */
+.categories { padding: 80px 0; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card .icon { font-size: 3rem; margin-bottom: 20px; }
+
+/* スマホ対応（レスポンシブ） */
+@media (max-width: 768px) {
+    .flex { flex-direction: column; text-align: center; }
+    .grid { grid-template-columns: 1fr; }
+    .hero-content h2 { font-size: 2rem; }
+}
